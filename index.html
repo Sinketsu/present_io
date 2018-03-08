@@ -1,0 +1,34 @@
+<html>
+	<style type="text/css">
+		input {
+			height: 100%;
+			width: 49.8%;
+			font-size: 20em;
+		}
+
+		.right {
+			float: right;
+		}
+
+	</style>
+<body>
+
+	<input type="button" name="left_button" class="left" onclick="left();" value="<">
+	<input type="button" name="right_button" class="right" onclick="right();" value=">">
+
+	<script type="text/javascript">
+		function left() {
+			var req = new XMLHttpRequest();
+			req.open("GET", "/left", true);
+			req.send(null);
+		}
+
+		function right() {
+			var req = new XMLHttpRequest();
+			req.open("GET", "/right", true);
+			req.send(null);
+		}
+
+	</script>
+</body>
+</html>
